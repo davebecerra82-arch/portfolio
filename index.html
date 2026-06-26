@@ -143,17 +143,6 @@
       margin: 0 auto;
     }
 
-    .hero-avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 2px solid var(--border);
-      margin-bottom: 24px;
-      display: block;
-    }
-
     .hero-eyebrow {
       font-family: var(--mono);
       font-size: 12px;
@@ -245,6 +234,22 @@
       grid-template-columns: 1fr 2fr;
       gap: 80px;
       align-items: start;
+    }
+
+    .about-profile {
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .about-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
     }
 
     .about-label {
@@ -575,7 +580,6 @@
   <!-- HERO -->
   <div class="hero" id="top">
     <div class="hero-content">
-      <img src="profile.jpg" alt="David Becerra" class="hero-avatar">
       <p class="hero-eyebrow">GTM Engineer &amp; Revenue Systems Builder</p>
       <h1>I build the systems that <em>fill</em> the pipeline.</h1>
       <p class="hero-body">
@@ -686,8 +690,11 @@
   <!-- ABOUT STRIP -->
   <div class="about-strip">
     <div class="about-label">Background</div>
-    <div class="about-text">
-      Co-founded <strong>Roambi</strong>, built the CS org through acquisition by SAP. Spent a decade inside enterprise software understanding why GTM breaks at scale. Now I build the pipelines that fix it -- ICP scoring, enrichment workflows, CRM automation, outbound infrastructure. <span class="muted">Barcelona-based. GTME School Cohort 8.</span>
+    <div class="about-profile">
+      <img src="profile.jpg" alt="David Becerra" class="about-avatar">
+      <div class="about-text">
+        Co-founded <strong>Roambi</strong>, built the CS org through acquisition by SAP. Spent a decade inside enterprise software understanding why GTM breaks at scale. Now I build the pipelines that fix it -- ICP scoring, enrichment workflows, CRM automation, outbound infrastructure. <span class="muted">Barcelona-based. GTME School Cohort 8.</span>
+      </div>
     </div>
   </div>
 
