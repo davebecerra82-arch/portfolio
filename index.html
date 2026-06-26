@@ -229,22 +229,22 @@
     .about-strip {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 80px 40px;
+      padding: 40px 40px;
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 80px;
+      grid-template-columns: 120px 1fr;
+      gap: 40px;
       align-items: start;
     }
 
     .about-profile {
       display: flex;
-      gap: 32px;
-      align-items: flex-start;
+      gap: 24px;
+      align-items: center;
     }
 
     .about-avatar {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
@@ -570,6 +570,7 @@
   <nav>
     <div class="nav-logo">db<span>.</span>gtm</div>
     <ul>
+      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#contact" class="nav-cta">Get in touch</a></li>
@@ -688,7 +689,7 @@
   </div>
 
   <!-- ABOUT STRIP -->
-  <div class="about-strip">
+  <div class="about-strip" id="about">
     <div class="about-label">Background</div>
     <div class="about-profile">
       <img src="profile.jpg" alt="David Becerra" class="about-avatar">
