@@ -1,166 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dave Becerra — GTM Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-	•	About
-	•	Projects
-	•	Stack
-	•	Resume
-	•	Get in touch
-	•	🌙
-GTM ENGINEER & REVENUE SYSTEMS BUILDER
-I build the systems that fill the pipeline.
-15 years running customer success at scale -- including co-founding Roambi (acquired by SAP). Now I design and build the GTM infrastructure that connects data, enrichment, scoring, and CRM into systems that actually work.
-See the work
-Talk to me
-SOURCE
-Apollo
-ENRICH
-Clay
-SCRAPE
-Firecrawl
-PROFILE
-Proxycurl
-SCORE
-Claude AI
-ROUTE
-Make
-CRM
-HubSpot
-BACKGROUND
+    :root {
+      --black: #F5F5F7;
+      --surface: #FFFFFF;
+      --surface-2: #F0F0F5;
+      --border: #DDDDE8;
+      --text: #0D0D0D;
+      --text-muted: #6B7280;
+      --accent: #4B3CE8;
+      --accent-dim: rgba(75, 60, 232, 0.1);
+      --accent-glow: rgba(75, 60, 232, 0.25);
+      --nav-bg: rgba(245, 245, 247, 0.88);
+      --mono: 'JetBrains Mono', monospace;
+      --serif: 'DM Serif Display', serif;
+      --sans: 'Inter', sans-serif;
+    }
 
-Co-founded Roambi, built the CS org through acquisition by SAP. Spent a decade inside enterprise software understanding why GTM breaks at scale. Now I build the pipelines that fix it -- ICP scoring, enrichment workflows, CRM automation, outbound infrastructure. Barcelona-based. GTME School Cohort 8.
+    body.dark {
+      --black: #0D0D0D;
+      --surface: #161619;
+      --surface-2: #1E1E24;
+      --border: #2A2A35;
+      --text: #F0EDE8;
+      --text-muted: #8A8A9A;
+      --accent: #5B4CFF;
+      --accent-dim: rgba(91, 76, 255, 0.15);
+      --accent-glow: rgba(91, 76, 255, 0.4);
+      --nav-bg: rgba(13, 13, 13, 0.85);
+    }
 
-SELECTED WORK
-Systems I've built
-ICP Scoring
-Enrichment Pipeline
-Nexen Capital
-B2B SaaS Lead Scoring & Enrichment Pipeline
-Nexen Capital needed a repeatable way to identify which B2B SaaS startups were worth pursuing -- and which weren't. I designed and built a full enrichment and ICP scoring pipeline that pulls raw leads from Apollo, enriches them across three data sources, runs them through a weighted scoring rubric, and writes the results directly to HubSpot as 11 custom properties. The architecture separates batch processing (Clay) from ongoing production automation (Make) to keep costs rational as volume scales.
-INGEST
-Apollo
-Raw lead list pulled by firmographic filters
-ENRICH
-Clay
-Firecrawl website scrape, Proxycurl LinkedIn data, waterfall logic
-SCORE
-Claude API
-Weighted rubric: SaaS signal, stage, runway, team, geography
-SYNC
-Make + HubSpot
-11 custom properties, ongoing automation, no Clay pricing ceiling hit
+    html { scroll-behavior: smooth; }
 
-SCORING DIMENSIONS
-8 weighted signals
-HARD DISQUALIFIERS
-4 auto-negatives
-CRM PROPERTIES WRITTEN
-11 custom fields
-Clay
-Apollo
-Firecrawl
-Proxycurl
-Claude API
-Make.com
-HubSpot
-Outbound Infrastructure
-GTM Automation
-GTME School · Cohort 8
-End-to-End GTM Engineering Curriculum & Live Builds
-As part of GTME School's Cohort 8, I built and shipped real outbound systems -- not demos. Projects covered ICP definition and scoring logic, AI-assisted personalization at scale, multi-step enrichment waterfalls, CRM workflow design, and Clay-to-Make architecture decisions. Each project was built against a live use case, not a sandbox.
-FOCUS AREA
-GTM Engineering
-FORMAT
-Live builds
-CAPSTONE
-Nexen Capital
-Clay
-Make.com
-Instantly
-Apollo
-HubSpot
-Claude API
-Supabase
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s, color 0.3s;
+    }
 
-TOOLS & STACK
-What I work with
-🧱
-Clay
-Enrichment orchestration, waterfall logic, batch processing
-⚙️
-Make.com
-Production automation, CRM sync, ongoing workflows
-🔍
-Apollo
-Lead sourcing and firmographic filtering
-🕷️
-Firecrawl
-Website scraping for intent and context signals
-👤
-Proxycurl
-LinkedIn data enrichment at scale
-🤖
-Claude API
-AI scoring, classification, and personalization
-🗄️
-HubSpot
-CRM, custom properties, deal pipeline
-📤
-Instantly
-Outbound sequencing and deliverability
-🗃️
-Supabase
-Data storage and pipeline state management
-💼
-Salesforce
-Enterprise CRM ops (from SAP / Roambi years)
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s, border-color 0.3s;
+    }
 
-CAREER
-Experience
-Download CV
-Jan 2026 – Present
-Salty Systems
-GTM Engineer & Systems Consultant
-	•	Built AI agent workflows using Claude API, GPT APIs, and Relevance AI for automated contact research, lead scoring, and personalisation.
-	•	Architected a 6-dimension lead scoring model across 4,900+ companies; Clay enrichment pipeline achieving 84% LinkedIn match rate and 59% email discovery.
-	•	Led end-to-end SaaS implementation of BookingLayer for a hospitality client — onboarding through adoption, Stripe/Mailchimp integrations.
-Clay
-Claude API
-HubSpot
-Relevance AI
-Apollo
-Jun 2024 – Dec 2025
-Kura Surf
-General Manager, Customer Experience & Operations
-	•	Rebuilt operations and customer journey from the ground up — onboarding, communication sequencing, post-stay follow-up.
-	•	20% increase in repeat bookings and 3× increase in 5-star reviews.
-Jun 2023 – Jun 2024
-Hey Ewe
-GTM Operations Lead
-	•	Delivered 50+ qualified leads per client across 20+ B2B clients simultaneously at 90%+ attainment.
-	•	Designed full outbound infrastructure: Apollo, Instantly, Potion, Zapier.
-Apollo
-Instantly
-Zapier
-Jun 2019 – Jul 2022
-SAP
-Manager, Customer Success Scale EMEA
-	•	Led a 15-person digital CS team across EMEA — $125M book, 1,500+ accounts.
-	•	Built health scoring, onboarding playbooks, and one-to-many programmes driving adoption and expansion at volume.
-	•	Drove NRR through proactive risk identification and structured renewal management.
-Mar 2017 – Sep 2019
-SAP
-Customer Success Executive, SAP Cloud Analytics
-	•	Managed 60–70 enterprise EMEA accounts at 90%+ GRR, exceeding regional benchmarks by 5–8 points.
-	•	Identified expansion opportunities generating ~$2M in upsell pipeline.
-Jan 2008 – Feb 2016
-Mellmo / Roambi
-Co-Founder, Head of Partnerships
-	•	Co-founded mobile BI startup — scaled from early stage through Series C to acquisition by SAP.
-	•	Built partner onboarding and enablement frameworks across multiple regions.
+    /* THEME TOGGLE */
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 15px;
+      padding: 6px 10px;
+      line-height: 1;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+      display: flex;
+      align-items: center;
+    }
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
 
-Let's talk GTM systems.
-Open to GTM engineering roles at B2B SaaS companies. Barcelona-based, open to remote.
-Send an email
-LinkedIn
-Dave Becerra · Barcelona · 2026
-LinkedIn
-Email
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    .nav-cta {
+      color: var(--text) !important;
+      border: 1px solid var(--border);
+      padding: 7px 16px;
+      border-radius: 6px;
+      transition: border-color 0.2s, background 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      border-color: var(--accent) !important;
+      background: var(--accent-dim) !important;
+    }
+
+    /* SECTIONS */
+    section { padding: 72px 40px; max-width: 1100px; margin: 0 auto; }
+    section, .about-strip { scroll-margin-top: 72px; }
+    #contact { scroll-margin-top: 72px; }
+
+    /* HERO */
+    .hero {
+      padding-top: 160px;
+      padding-bottom: 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 5vw, 62px);
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    .hero-body {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: opacity 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-secondary {
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover { border-color: var(--accent); color: var(--text); }
+
+    /* PIPELINE SVG */
+    .pipeline-wrap {
+      position: relative;
+    }
+
+    .pipeline-svg {
+      width: 100%;
+      height: auto;
+    }
+
+    /* DIVIDER */
+    .divider {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ABOUT STRIP */
+    .about-strip {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 40px;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .about-profile {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .about-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    .about-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-top: 4px;
+    }
+
+    .about-text {
+      font-size: 20px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .about-text strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .about-text .muted {
+      color: var(--text-muted);
+    }
+
+    /* PROJECTS */
+    .projects-header {
+      margin-bottom: 48px;
+    }
+
+    .section-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3.5vw, 42px);
+      color: var(--text);
+      line-height: 1.15;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 24px;
+      transition: border-color 0.3s;
+    }
+
+    .project-card:hover {
+      border-color: var(--accent);
+    }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .project-tag.neutral {
+      color: var(--text-muted);
+      background: var(--surface-2);
+    }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: 26px;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .project-description {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 680px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .project-stat {
+      background: var(--surface-2);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--text);
+    }
+
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stack-chip {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    /* STACK SECTION */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 12px;
+      margin-top: 48px;
+    }
+
+    .stack-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s;
+    }
+
+    .stack-item:hover { border-color: var(--accent); }
+
+    .stack-icon {
+      font-size: 20px;
+    }
+
+    .stack-name {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .stack-role {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* RESUME */
+    .resume-download {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .timeline-left { padding-top: 2px; }
+
+    .timeline-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .timeline-company {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .timeline-role {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .timeline-bullets li {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .timeline-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 11px;
+      top: 2px;
+    }
+
+    .timeline-bullets li strong { color: var(--text); font-weight: 600; }
+
+    .timeline-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .resume-download { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* CONTACT */
+    .contact-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 64px;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 48px);
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .contact-sub {
+      color: var(--text-muted);
+      font-size: 17px;
+      margin-bottom: 36px;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px 200px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text); }
+
+    /* PROCESS CONNECTOR */
+    .process-row {
+      display: flex;
+      gap: 0;
+      margin-top: 48px;
+      position: relative;
+    }
+
+    .process-step {
+      flex: 1;
+      padding: 28px 24px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+
+    .process-step:first-child {
+      border-left: 1px solid var(--border);
+      border-radius: 8px 0 0 8px;
+    }
+
+    .process-step:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    .process-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+    }
+
+    .process-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .process-detail {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      nav ul { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 120px 20px 80px; gap: 48px; }
+      .hero-body { max-width: 100%; }
+      section { padding: 80px 20px; }
+      .about-strip { grid-template-columns: 1fr; padding: 60px 20px; gap: 24px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .contact-inner { padding: 40px 24px; }
+      footer { flex-direction: column; gap: 16px; padding: 24px 20px; }
+      .process-row { flex-direction: column; }
+      .process-step { border-radius: 0; border-right: 1px solid var(--border); border-left: 1px solid var(--border); border-top: none; }
+      .process-step:first-child { border-top: 1px solid var(--border); border-radius: 8px 8px 0 0; }
+      .process-step:last-child { border-radius: 0 0 8px 8px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div></div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero" id="top">
+    <div class="hero-content">
+      <p class="hero-eyebrow">GTM Engineer &amp; Revenue Systems Builder</p>
+      <h1>I build the systems that <em>fill</em> the pipeline.</h1>
+      <p class="hero-body">
+        15 years running customer success at scale -- including co-founding Roambi (acquired by SAP). Now I design and build the GTM infrastructure that connects data, enrichment, scoring, and CRM into systems that actually work.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">See the work</a>
+        <a href="#contact" class="btn-secondary">Talk to me</a>
+      </div>
+    </div>
+
+    <div class="pipeline-wrap">
+      <svg class="pipeline-svg" viewBox="0 0 480 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#5B4CFF" stop-opacity="0.2"/>
+            <stop offset="50%" stop-color="#5B4CFF" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#5B4CFF" stop-opacity="0.2"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Background grid lines -->
+        <line x1="0" y1="80" x2="480" y2="80" stroke="#2A2A35" stroke-width="1" opacity="0.4"/>
+        <line x1="0" y1="160" x2="480" y2="160" stroke="#2A2A35" stroke-width="1" opacity="0.4"/>
+        <line x1="0" y1="240" x2="480" y2="240" stroke="#2A2A35" stroke-width="1" opacity="0.4"/>
+        <line x1="120" y1="0" x2="120" y2="320" stroke="#2A2A35" stroke-width="1" opacity="0.4"/>
+        <line x1="240" y1="0" x2="240" y2="320" stroke="#2A2A35" stroke-width="1" opacity="0.4"/>
+        <line x1="360" y1="0" x2="360" y2="320" stroke="#2A2A35" stroke-width="1" opacity="0.4"/>
+
+        <!-- Connection lines -->
+        <path d="M 88 160 C 120 160, 120 80, 152 80" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+        <path d="M 88 160 C 120 160, 120 160, 152 160" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+        <path d="M 88 160 C 120 160, 120 240, 152 240" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+
+        <path d="M 208 80 C 240 80, 240 100, 272 120" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+        <path d="M 208 160 C 240 160, 240 140, 272 120" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+        <path d="M 208 240 C 240 240, 240 200, 272 200" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+
+        <path d="M 328 120 C 360 120, 360 160, 392 160" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+        <path d="M 328 200 C 360 200, 360 160, 392 160" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.6"/>
+
+        <!-- SOURCE node -->
+        <rect x="32" y="136" width="56" height="48" rx="8" fill="#161619" stroke="#2A2A35" stroke-width="1.5"/>
+        <text x="60" y="155" fill="#8A8A9A" font-family="JetBrains Mono" font-size="8" text-anchor="middle">SOURCE</text>
+        <text x="60" y="168" fill="#F0EDE8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" font-weight="500">Apollo</text>
+        <circle cx="88" cy="160" r="3" fill="#5B4CFF"/>
+
+        <!-- ENRICH nodes -->
+        <rect x="152" y="56" width="56" height="48" rx="8" fill="#161619" stroke="#5B4CFF" stroke-width="1.5" filter="url(#glow)"/>
+        <text x="180" y="75" fill="#8A8A9A" font-family="JetBrains Mono" font-size="7" text-anchor="middle">ENRICH</text>
+        <text x="180" y="88" fill="#F0EDE8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" font-weight="500">Clay</text>
+        <circle cx="152" cy="80" r="3" fill="#5B4CFF"/>
+        <circle cx="208" cy="80" r="3" fill="#5B4CFF"/>
+
+        <rect x="152" y="136" width="56" height="48" rx="8" fill="#161619" stroke="#2A2A35" stroke-width="1.5"/>
+        <text x="180" y="155" fill="#8A8A9A" font-family="JetBrains Mono" font-size="7" text-anchor="middle">SCRAPE</text>
+        <text x="180" y="168" fill="#F0EDE8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" font-weight="500">Firecrawl</text>
+        <circle cx="152" cy="160" r="3" fill="#5B4CFF"/>
+        <circle cx="208" cy="160" r="3" fill="#5B4CFF"/>
+
+        <rect x="152" y="216" width="56" height="48" rx="8" fill="#161619" stroke="#2A2A35" stroke-width="1.5"/>
+        <text x="180" y="235" fill="#8A8A9A" font-family="JetBrains Mono" font-size="7" text-anchor="middle">PROFILE</text>
+        <text x="180" y="248" fill="#F0EDE8" font-family="JetBrains Mono" font-size="8" text-anchor="middle" font-weight="500">Proxycurl</text>
+        <circle cx="152" cy="240" r="3" fill="#5B4CFF"/>
+        <circle cx="208" cy="240" r="3" fill="#5B4CFF"/>
+
+        <!-- SCORE node -->
+        <rect x="272" y="96" width="56" height="48" rx="8" fill="#161619" stroke="#5B4CFF" stroke-width="1.5" filter="url(#glow)"/>
+        <text x="300" y="115" fill="#8A8A9A" font-family="JetBrains Mono" font-size="7.5" text-anchor="middle">SCORE</text>
+        <text x="300" y="128" fill="#F0EDE8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" font-weight="500">Claude AI</text>
+        <circle cx="272" cy="120" r="3" fill="#5B4CFF"/>
+        <circle cx="328" cy="120" r="3" fill="#5B4CFF"/>
+
+        <rect x="272" y="176" width="56" height="48" rx="8" fill="#161619" stroke="#2A2A35" stroke-width="1.5"/>
+        <text x="300" y="195" fill="#8A8A9A" font-family="JetBrains Mono" font-size="7.5" text-anchor="middle">ROUTE</text>
+        <text x="300" y="208" fill="#F0EDE8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" font-weight="500">Make</text>
+        <circle cx="272" cy="200" r="3" fill="#5B4CFF"/>
+        <circle cx="328" cy="200" r="3" fill="#5B4CFF"/>
+
+        <!-- CRM node -->
+        <rect x="392" y="136" width="56" height="48" rx="8" fill="#161619" stroke="#5B4CFF" stroke-width="1.5" filter="url(#glow)"/>
+        <text x="420" y="155" fill="#8A8A9A" font-family="JetBrains Mono" font-size="7.5" text-anchor="middle">CRM</text>
+        <text x="420" y="168" fill="#F0EDE8" font-family="JetBrains Mono" font-size="9" text-anchor="middle" font-weight="500">HubSpot</text>
+        <circle cx="392" cy="160" r="3" fill="#5B4CFF"/>
+
+        <!-- Animated pulse dot -->
+        <circle r="4" fill="#5B4CFF" opacity="0.9">
+          <animateMotion dur="3s" repeatCount="indefinite" begin="0s">
+            <mpath href="#pulse-path-1"/>
+          </animateMotion>
+        </circle>
+        <path id="pulse-path-1" d="M 60 160 C 120 160, 120 80, 180 80 C 240 80, 240 120, 300 120 C 360 120, 360 160, 420 160" fill="none"/>
+
+        <circle r="3" fill="#5B4CFF" opacity="0.6">
+          <animateMotion dur="4s" repeatCount="indefinite" begin="1.5s">
+            <mpath href="#pulse-path-2"/>
+          </animateMotion>
+        </circle>
+        <path id="pulse-path-2" d="M 60 160 C 120 160, 120 240, 180 240 C 240 240, 240 200, 300 200 C 360 200, 360 160, 420 160" fill="none"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ABOUT STRIP -->
+  <div class="about-strip" id="about">
+    <div class="about-label">Background</div>
+    <div class="about-profile">
+      <img src="profile.jpg" alt="David Becerra" class="about-avatar">
+      <div class="about-text">
+        Co-founded <strong>Roambi</strong>, built the CS org through acquisition by SAP. Spent a decade inside enterprise software understanding why GTM breaks at scale. Now I build the pipelines that fix it -- ICP scoring, enrichment workflows, CRM automation, outbound infrastructure. <span class="muted">Barcelona-based. GTME School Cohort 8.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header">
+      <p class="section-eyebrow">Selected Work</p>
+      <h2 class="section-title">Systems I've built</h2>
+    </div>
+
+    <!-- Project 1: Nexen Capital -->
+    <div class="project-card">
+      <div class="project-meta">
+        <span class="project-tag">ICP Scoring</span>
+        <span class="project-tag">Enrichment Pipeline</span>
+        <span class="project-tag neutral">Nexen Capital</span>
+      </div>
+      <h3 class="project-title">B2B SaaS Lead Scoring &amp; Enrichment Pipeline</h3>
+      <p class="project-description">
+        Nexen Capital needed a repeatable way to identify which B2B SaaS startups were worth pursuing -- and which weren't. I designed and built a full enrichment and ICP scoring pipeline that pulls raw leads from Apollo, enriches them across three data sources, runs them through a weighted scoring rubric, and writes the results directly to HubSpot as 11 custom properties. The architecture separates batch processing (Clay) from ongoing production automation (Make) to keep costs rational as volume scales.
+      </p>
+
+      <div class="process-row">
+        <div class="process-step">
+          <div class="process-num">INGEST</div>
+          <div class="process-name">Apollo</div>
+          <div class="process-detail">Raw lead list pulled by firmographic filters</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">ENRICH</div>
+          <div class="process-name">Clay</div>
+          <div class="process-detail">Firecrawl website scrape, Proxycurl LinkedIn data, waterfall logic</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">SCORE</div>
+          <div class="process-name">Claude API</div>
+          <div class="process-detail">Weighted rubric: SaaS signal, stage, runway, team, geography</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">SYNC</div>
+          <div class="process-name">Make + HubSpot</div>
+          <div class="process-detail">11 custom properties, ongoing automation, no Clay pricing ceiling hit</div>
+        </div>
+      </div>
+
+      <br>
+      <div class="project-grid">
+        <div class="project-stat">
+          <div class="stat-label">Scoring Dimensions</div>
+          <div class="stat-value">8 weighted signals</div>
+        </div>
+        <div class="project-stat">
+          <div class="stat-label">Hard Disqualifiers</div>
+          <div class="stat-value">4 auto-negatives</div>
+        </div>
+        <div class="project-stat">
+          <div class="stat-label">CRM Properties Written</div>
+          <div class="stat-value">11 custom fields</div>
+        </div>
+      </div>
+
+      <div class="project-stack">
+        <span class="stack-chip">Clay</span>
+        <span class="stack-chip">Apollo</span>
+        <span class="stack-chip">Firecrawl</span>
+        <span class="stack-chip">Proxycurl</span>
+        <span class="stack-chip">Claude API</span>
+        <span class="stack-chip">Make.com</span>
+        <span class="stack-chip">HubSpot</span>
+      </div>
+    </div>
+
+    <!-- Project 2: GTME Cohort -->
+    <div class="project-card">
+      <div class="project-meta">
+        <span class="project-tag">Outbound Infrastructure</span>
+        <span class="project-tag">GTM Automation</span>
+        <span class="project-tag neutral">GTME School · Cohort 8</span>
+      </div>
+      <h3 class="project-title">End-to-End GTM Engineering Curriculum &amp; Live Builds</h3>
+      <p class="project-description">
+        As part of GTME School's Cohort 8, I built and shipped real outbound systems -- not demos. Projects covered ICP definition and scoring logic, AI-assisted personalization at scale, multi-step enrichment waterfalls, CRM workflow design, and Clay-to-Make architecture decisions. Each project was built against a live use case, not a sandbox.
+      </p>
+
+      <div class="project-grid">
+        <div class="project-stat">
+          <div class="stat-label">Focus Area</div>
+          <div class="stat-value">GTM Engineering</div>
+        </div>
+        <div class="project-stat">
+          <div class="stat-label">Format</div>
+          <div class="stat-value">Live builds</div>
+        </div>
+        <div class="project-stat">
+          <div class="stat-label">Capstone</div>
+          <div class="stat-value">Nexen Capital</div>
+        </div>
+      </div>
+
+      <div class="project-stack">
+        <span class="stack-chip">Clay</span>
+        <span class="stack-chip">Make.com</span>
+        <span class="stack-chip">Instantly</span>
+        <span class="stack-chip">Apollo</span>
+        <span class="stack-chip">HubSpot</span>
+        <span class="stack-chip">Claude API</span>
+        <span class="stack-chip">Supabase</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- STACK -->
+  <section id="stack">
+    <p class="section-eyebrow">Tools &amp; Stack</p>
+    <h2 class="section-title">What I work with</h2>
+    <div class="stack-grid">
+      <div class="stack-item">
+        <div class="stack-icon">🧱</div>
+        <div class="stack-name">Clay</div>
+        <div class="stack-role">Enrichment orchestration, waterfall logic, batch processing</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">⚙️</div>
+        <div class="stack-name">Make.com</div>
+        <div class="stack-role">Production automation, CRM sync, ongoing workflows</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">🔍</div>
+        <div class="stack-name">Apollo</div>
+        <div class="stack-role">Lead sourcing and firmographic filtering</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">🕷️</div>
+        <div class="stack-name">Firecrawl</div>
+        <div class="stack-role">Website scraping for intent and context signals</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">👤</div>
+        <div class="stack-name">Proxycurl</div>
+        <div class="stack-role">LinkedIn data enrichment at scale</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">🤖</div>
+        <div class="stack-name">Claude API</div>
+        <div class="stack-role">AI scoring, classification, and personalization</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">🗄️</div>
+        <div class="stack-name">HubSpot</div>
+        <div class="stack-role">CRM, custom properties, deal pipeline</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">📤</div>
+        <div class="stack-name">Instantly</div>
+        <div class="stack-role">Outbound sequencing and deliverability</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">🗃️</div>
+        <div class="stack-name">Supabase</div>
+        <div class="stack-role">Data storage and pipeline state management</div>
+      </div>
+      <div class="stack-item">
+        <div class="stack-icon">💼</div>
+        <div class="stack-name">Salesforce</div>
+        <div class="stack-role">Enterprise CRM ops (from SAP / Roambi years)</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <div class="resume-download">
+      <div>
+        <p class="section-eyebrow">Career</p>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <a href="/David_Becerra_CV_CSM_v2.pdf" download class="btn-primary">Download CV</a>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2026 – Present</div>
+          <div class="timeline-company">Salty Systems</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">GTM Engineer & Systems Consultant</div>
+          <ul class="timeline-bullets">
+            <li>Built <strong>AI agent workflows</strong> using Claude API, GPT APIs, and Relevance AI for automated contact research, lead scoring, and personalisation.</li>
+            <li>Architected a <strong>6-dimension lead scoring model</strong> across 4,900+ companies; Clay enrichment pipeline achieving 84% LinkedIn match rate and 59% email discovery.</li>
+            <li>Led end-to-end SaaS implementation of BookingLayer for a hospitality client — onboarding through adoption, Stripe/Mailchimp integrations.</li>
+          </ul>
+          <div class="timeline-chips">
+            <span class="stack-chip">Clay</span>
+            <span class="stack-chip">Claude API</span>
+            <span class="stack-chip">HubSpot</span>
+            <span class="stack-chip">Relevance AI</span>
+            <span class="stack-chip">Apollo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2024 – Dec 2025</div>
+          <div class="timeline-company">Kura Surf</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">General Manager, Customer Experience & Operations</div>
+          <ul class="timeline-bullets">
+            <li>Rebuilt operations and customer journey from the ground up — onboarding, communication sequencing, post-stay follow-up.</li>
+            <li><strong>20% increase in repeat bookings</strong> and <strong>3× increase in 5-star reviews</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2023 – Jun 2024</div>
+          <div class="timeline-company">Hey Ewe</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">GTM Operations Lead</div>
+          <ul class="timeline-bullets">
+            <li>Delivered <strong>50+ qualified leads per client</strong> across 20+ B2B clients simultaneously at 90%+ attainment.</li>
+            <li>Designed full outbound infrastructure: Apollo, Instantly, Potion, Zapier.</li>
+          </ul>
+          <div class="timeline-chips">
+            <span class="stack-chip">Apollo</span>
+            <span class="stack-chip">Instantly</span>
+            <span class="stack-chip">Zapier</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2019 – Jul 2022</div>
+          <div class="timeline-company">SAP</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Manager, Customer Success Scale EMEA</div>
+          <ul class="timeline-bullets">
+            <li>Led a <strong>15-person digital CS team</strong> across EMEA — <strong>$125M book, 1,500+ accounts</strong>.</li>
+            <li>Built health scoring, onboarding playbooks, and one-to-many programmes driving adoption and expansion at volume.</li>
+            <li>Drove NRR through proactive risk identification and structured renewal management.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Mar 2017 – Sep 2019</div>
+          <div class="timeline-company">SAP</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Customer Success Executive, SAP Cloud Analytics</div>
+          <ul class="timeline-bullets">
+            <li>Managed <strong>60–70 enterprise EMEA accounts</strong> at <strong>90%+ GRR</strong>, exceeding regional benchmarks by 5–8 points.</li>
+            <li>Identified expansion opportunities generating <strong>~$2M in upsell pipeline</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2008 – Feb 2016</div>
+          <div class="timeline-company">Mellmo / Roambi</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Co-Founder, Head of Partnerships</div>
+          <ul class="timeline-bullets">
+            <li>Co-founded mobile BI startup — scaled from early stage through <strong>Series C to acquisition by SAP</strong>.</li>
+            <li>Built partner onboarding and enablement frameworks across multiple regions.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <h2 class="contact-title">Let's talk GTM systems.</h2>
+      <p class="contact-sub">
+        Open to GTM engineering roles at B2B SaaS companies. Barcelona-based, open to remote.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:davebecerra82@gmail.com" class="btn-primary">Send an email</a>
+        <a href="https://www.linkedin.com/in/dabecerra/" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-copy">Dave Becerra · Barcelona · 2026</div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/dabecerra/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:davebecerra82@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') { body.classList.add('dark'); toggle.textContent = '☀️'; }
+    else { toggle.textContent = '🌙'; }
+
+    toggle.addEventListener('click', () => {
+      const isDark = body.classList.toggle('dark');
+      toggle.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
