@@ -432,6 +432,92 @@
       line-height: 1.4;
     }
 
+    /* RESUME */
+    .resume-download {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .timeline-left { padding-top: 2px; }
+
+    .timeline-date {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .timeline-company {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .timeline-role {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .timeline-bullets li {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .timeline-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 11px;
+      top: 2px;
+    }
+
+    .timeline-bullets li strong { color: var(--text); font-weight: 600; }
+
+    .timeline-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .resume-download { flex-direction: column; align-items: flex-start; }
+    }
+
     /* CONTACT */
     .contact-inner {
       background: var(--surface);
@@ -575,6 +661,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#stack">Stack</a></li>
+      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact" class="nav-cta">Get in touch</a></li>
       <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
     </ul>
@@ -868,6 +955,121 @@
         <div class="stack-name">Salesforce</div>
         <div class="stack-role">Enterprise CRM ops (from SAP / Roambi years)</div>
       </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <div class="resume-download">
+      <div>
+        <p class="section-eyebrow">Career</p>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <a href="/David_Becerra_CV_CSM_v2.pdf" download class="btn-primary">Download CV</a>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2026 – Present</div>
+          <div class="timeline-company">Salty Systems</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">GTM Engineer & Systems Consultant</div>
+          <ul class="timeline-bullets">
+            <li>Built <strong>AI agent workflows</strong> using Claude API, GPT APIs, and Relevance AI for automated contact research, lead scoring, and personalisation.</li>
+            <li>Architected a <strong>6-dimension lead scoring model</strong> across 4,900+ companies; Clay enrichment pipeline achieving 84% LinkedIn match rate and 59% email discovery.</li>
+            <li>Led end-to-end SaaS implementation of BookingLayer for a hospitality client — onboarding through adoption, Stripe/Mailchimp integrations.</li>
+          </ul>
+          <div class="timeline-chips">
+            <span class="stack-chip">Clay</span>
+            <span class="stack-chip">Claude API</span>
+            <span class="stack-chip">HubSpot</span>
+            <span class="stack-chip">Relevance AI</span>
+            <span class="stack-chip">Apollo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2024 – Dec 2025</div>
+          <div class="timeline-company">Kura Surf</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">General Manager, Customer Experience & Operations</div>
+          <ul class="timeline-bullets">
+            <li>Rebuilt operations and customer journey from the ground up — onboarding, communication sequencing, post-stay follow-up.</li>
+            <li><strong>20% increase in repeat bookings</strong> and <strong>3× increase in 5-star reviews</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2023 – Jun 2024</div>
+          <div class="timeline-company">Hey Ewe</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">GTM Operations Lead</div>
+          <ul class="timeline-bullets">
+            <li>Delivered <strong>50+ qualified leads per client</strong> across 20+ B2B clients simultaneously at 90%+ attainment.</li>
+            <li>Designed full outbound infrastructure: Apollo, Instantly, Potion, Zapier.</li>
+          </ul>
+          <div class="timeline-chips">
+            <span class="stack-chip">Apollo</span>
+            <span class="stack-chip">Instantly</span>
+            <span class="stack-chip">Zapier</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2019 – Jul 2022</div>
+          <div class="timeline-company">SAP</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Manager, Customer Success Scale EMEA</div>
+          <ul class="timeline-bullets">
+            <li>Led a <strong>15-person digital CS team</strong> across EMEA — <strong>$125M book, 1,500+ accounts</strong>.</li>
+            <li>Built health scoring, onboarding playbooks, and one-to-many programmes driving adoption and expansion at volume.</li>
+            <li>Drove NRR through proactive risk identification and structured renewal management.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Mar 2017 – Sep 2019</div>
+          <div class="timeline-company">SAP</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Customer Success Executive, SAP Cloud Analytics</div>
+          <ul class="timeline-bullets">
+            <li>Managed <strong>60–70 enterprise EMEA accounts</strong> at <strong>90%+ GRR</strong>, exceeding regional benchmarks by 5–8 points.</li>
+            <li>Identified expansion opportunities generating <strong>~$2M in upsell pipeline</strong>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2008 – Feb 2016</div>
+          <div class="timeline-company">Mellmo / Roambi</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Co-Founder, Head of Partnerships</div>
+          <ul class="timeline-bullets">
+            <li>Co-founded mobile BI startup — scaled from early stage through <strong>Series C to acquisition by SAP</strong>.</li>
+            <li>Built partner onboarding and enablement frameworks across multiple regions.</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
 
