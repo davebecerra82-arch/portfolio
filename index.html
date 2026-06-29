@@ -674,7 +674,7 @@
       <p class="hero-eyebrow">GTM Engineer &amp; Revenue Systems Builder</p>
       <h1>I build the systems that <em>fill</em> the pipeline.</h1>
       <p class="hero-body">
-        15 years running customer success at scale -- including co-founding Roambi (acquired by SAP). Now I design and build the GTM infrastructure that connects data, enrichment, scoring, and CRM into systems that actually work.
+        15 years in B2B SaaS -- including co-founding Roambi (acquired by SAP). Now I design and build the GTM infrastructure that connects data, enrichment, scoring, and CRM into systems.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">See the work</a>
@@ -784,7 +784,7 @@
     <div class="about-profile">
       <img src="profile.jpg" alt="David Becerra" class="about-avatar">
       <div class="about-text">
-        Co-founded <strong>Roambi</strong>, built the CS org through acquisition by SAP. Spent a decade inside enterprise software understanding why GTM breaks at scale. Now I build the pipelines that fix it -- ICP scoring, enrichment workflows, CRM automation, outbound infrastructure. <span class="muted">Barcelona-based. GTME School Cohort 8.</span>
+        Co-founded <strong>Roambi</strong>, built the CS org through acquisition by SAP. Spent a decade inside enterprise software understanding why GTM breaks at scale. Now I build pipelines using ICP scoring, enrichment workflows, CRM automation, outbound infrastructure. <span class="muted">Barcelona-based. GTME School Cohort 8.</span>
       </div>
     </div>
   </div>
@@ -807,7 +807,7 @@
       </div>
       <h3 class="project-title">B2B SaaS Lead Scoring &amp; Enrichment Pipeline</h3>
       <p class="project-description">
-        Nexen Capital needed a repeatable way to identify which B2B SaaS startups were worth pursuing -- and which weren't. I designed and built a full enrichment and ICP scoring pipeline that pulls raw leads from Apollo, enriches them across three data sources, runs them through a weighted scoring rubric, and writes the results directly to HubSpot as 11 custom properties. The architecture separates batch processing (Clay) from ongoing production automation (Make) to keep costs rational as volume scales.
+        Nexen Capital needed a repeatable way to identify which B2B SaaS startups were worth pursuing -- and which weren't. I designed and built a full enrichment and ICP scoring pipeline that pulls raw leads from Apollo, enriches them through a Clay waterfall, scores them via Claude API against a weighted rubric, and exports the results directly into HubSpot. Hard disqualifiers filtered out noise before scoring ran, keeping the output clean and actionable.
       </p>
 
       <div class="process-row">
@@ -819,7 +819,7 @@
         <div class="process-step">
           <div class="process-num">ENRICH</div>
           <div class="process-name">Clay</div>
-          <div class="process-detail">Firecrawl website scrape, Proxycurl LinkedIn data, waterfall logic</div>
+          <div class="process-detail">Prospeo + Apollo + Claygent waterfall — LinkedIn match, email discovery, AI web scrape</div>
         </div>
         <div class="process-step">
           <div class="process-num">SCORE</div>
@@ -827,9 +827,9 @@
           <div class="process-detail">Weighted rubric: SaaS signal, stage, runway, team, geography</div>
         </div>
         <div class="process-step">
-          <div class="process-num">SYNC</div>
-          <div class="process-name">Make + HubSpot</div>
-          <div class="process-detail">11 custom properties, ongoing automation, no Clay pricing ceiling hit</div>
+          <div class="process-num">EXPORT</div>
+          <div class="process-name">HubSpot</div>
+          <div class="process-detail">CSV export from Clay imported into HubSpot with custom properties</div>
         </div>
       </div>
 
@@ -837,25 +837,24 @@
       <div class="project-grid">
         <div class="project-stat">
           <div class="stat-label">Scoring Dimensions</div>
-          <div class="stat-value">8 weighted signals</div>
+          <div class="stat-value">6 weighted signals</div>
         </div>
         <div class="project-stat">
           <div class="stat-label">Hard Disqualifiers</div>
-          <div class="stat-value">4 auto-negatives</div>
+          <div class="stat-value">4–5 filters</div>
         </div>
         <div class="project-stat">
-          <div class="stat-label">CRM Properties Written</div>
-          <div class="stat-value">11 custom fields</div>
+          <div class="stat-label">Companies Scored</div>
+          <div class="stat-value">4,900+</div>
         </div>
       </div>
 
       <div class="project-stack">
         <span class="stack-chip">Clay</span>
         <span class="stack-chip">Apollo</span>
-        <span class="stack-chip">Firecrawl</span>
-        <span class="stack-chip">Proxycurl</span>
+        <span class="stack-chip">Prospeo</span>
+        <span class="stack-chip">Claygent</span>
         <span class="stack-chip">Claude API</span>
-        <span class="stack-chip">Make.com</span>
         <span class="stack-chip">HubSpot</span>
       </div>
     </div>
